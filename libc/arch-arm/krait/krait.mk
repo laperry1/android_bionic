@@ -4,16 +4,7 @@ libc_bionic_src_files_arm += \
     arch-arm/krait/bionic/strcmp.S \
     arch-arm/krait/bionic/__strcat_chk.S \
     arch-arm/krait/bionic/__strcpy_chk.S \
-    arch-arm/krait/bionic/memmove.S
-
-#For some targets we don't need this optimization
-ifeq ($(TARGET_CPU_MEMCPY_BASE_OPT_DISABLE),true)
-libc_bionic_src_files_arm += \
-    arch-arm/cortex-a15/bionic/memcpy.S
-else
-libc_bionic_src_files_arm += \
-    arch-arm/krait/bionic/memcpy.S
-endif
+    arch-arm/bionic/memchr.v7a.S \
 
 # Use cortex-a15 versions of strcat/strcpy/strlen and standard memmove
 libc_bionic_src_files_arm += \
