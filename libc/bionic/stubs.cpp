@@ -238,6 +238,7 @@ static unsigned app_id_from_name(const char* name) {
         appid = android_ids[n].aid;
         // Move the end pointer to the null terminator.
         end += strlen(android_ids[n].name) + 1;
+        break;
       }
     }
   }
