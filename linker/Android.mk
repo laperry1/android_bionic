@@ -26,7 +26,7 @@ LOCAL_LDFLAGS := \
 
 LOCAL_CFLAGS += \
     -fno-stack-protector \
-    -Wstrict-overflow=5 \
+    -Wstrict-overflow=2 \
     -fvisibility=hidden \
     -Wall -Wextra -Wunused -Werror \
 
