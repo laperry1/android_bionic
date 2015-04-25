@@ -323,11 +323,9 @@ TEST(pthread, pthread_sigmask) {
 }
 
 TEST(pthread, pthread_setname_np__too_long) {
-#if defined(__BIONIC__) // Not all build servers have a new enough glibc? TODO: remove when they're on gprecise.
-  ASSERT_EQ(ERANGE, pthread_setname_np(pthread_self(), "this name is far too long for linux"));
-#else // __BIONIC__
-  GTEST_LOG_(INFO) << "This test does nothing.\n";
-#endif // __BIONIC__
+  // The limit is 15 characters --- the kernel's buffer is 16, but includes a NUL.
+  ASSERT_EQ(0, pthread_setname_np(pthread_self(), "123456789012345"));
+  ASSERT_EQ(ERANGE, pthread_setname_np(pthread_self(), "1234567890123456"));
 }
 
 TEST(pthread, pthread_setname_np__self) {
