@@ -225,11 +225,9 @@ include $(LOCAL_PATH)/Android.build.mk
 bionic-unit-tests_whole_static_libraries := \
     libBionicTests \
 
-# TODO: Include __cxa_thread_atexit_test.cpp to glibc tests once it is upgraded (glibc 2.18+)
 bionic-unit-tests_src_files := \
     atexit_test.cpp \
     dlext_test.cpp \
-    __cxa_thread_atexit_test.cpp \
     dlfcn_test.cpp \
 
 bionic-unit-tests_cflags := $(test_cflags)
