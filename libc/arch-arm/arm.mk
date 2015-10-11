@@ -24,10 +24,7 @@ libc_openbsd_src_files_arm += \
 
 libc_bionic_src_files_arm += \
     bionic/memrchr.c \
-<<<<<<< HEAD
     bionic/strncat.c \
-=======
->>>>>>> 93eb99975ce66dd50e00c839797bbae378e50395
     bionic/strnlen.c \
 
 libc_freebsd_src_files_arm += \
