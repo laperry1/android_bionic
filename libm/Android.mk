@@ -484,7 +484,6 @@ LOCAL_CFLAGS := \
     -D__BIONIC_NO_MATH_INLINES \
     -DFLT_EVAL_METHOD=0 \
     -include $(LOCAL_PATH)/freebsd-compat.h \
-    -Werror \
     -Wno-missing-braces \
     -Wno-parentheses \
     -Wno-sign-compare \
